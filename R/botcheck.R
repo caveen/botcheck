@@ -37,7 +37,7 @@ botcheck = function(user) {
   body_json = RJSONIO::toJSON(body, auto_unbox = T, pretty = T)
   
   # Make the API request
-  result = POST("https//osome-botometer.p.rapidapi.com/2/check_account",
+  result = POST("https://botometer-pro.p.rapidapi.com/2/check_account",
                  encode="json",
                  add_headers(`X-Mashape-Key`=Mashape_key),
                  body=body_json)
@@ -48,4 +48,3 @@ botcheck = function(user) {
   # Return "English" score
   return(result$scores$english)
 }
-
